@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ayush Srivastava — Premium 3D Portfolio
 
 A production-ready, fully responsive, dependency-free portfolio site.
@@ -72,3 +73,7 @@ Nothing has been invented for you — every placeholder is marked.
 - No horizontal scrolling
 
 Built with curiosity, code and continuous learning.
+=======
+# Ayushsri-portfolio
+A modern personal portfolio showcasing my software development projects, technical skills, achievements, and journey as an aspiring Software Engineer.
+>>>>>>> 5711618dbd5f0132b8a6ae5be724693d16c13c09
