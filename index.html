@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ayush Srivastava — Aspiring Software Engineer</title>
+  <meta name="description" content="Portfolio of Ayush Srivastava — Aspiring Software Engineer and B.Tech CSE Student. Developer, builder and future entrepreneur." />
+  <meta name="theme-color" content="#050505" />
+
+  <meta property="og:title" content="Ayush Srivastava — Aspiring Software Engineer" />
+  <meta property="og:description" content="Developer, builder and future entrepreneur passionate about creating useful technology." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0A'/%3E%3Ctext x='32' y='42' font-family='Arial' font-size='30' font-weight='700' fill='%2322C55E' text-anchor='middle'%3EAS%3C/text%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <noscript>
+    <style>
+      /* Without JS: show everything and render skills as a readable chip list */
+      [data-reveal] { opacity: 1 !important; transform: none !important; }
+      .galaxy { min-height: unset; padding: 22px 18px 26px; }
+      .galaxy-canvas { display: none; }
+      .galaxy-nodes { position: static; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+      .galaxy-cat { position: static; transform: none; width: 100%; margin-top: 12px; }
+      .gnode { position: static; transform: none; }
+      .galaxy-info { position: static; width: 100%; margin-top: 20px; }
+      .timeline::after, .roadmap__progress { transform: none !important; }
+    </style>
+  </noscript>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Custom cursor (desktop only, disabled automatically on touch) -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- Animated background layers -->
+  <div class="bg-layers" aria-hidden="true">
+    <canvas id="bg-canvas"></canvas>
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--green"></div>
+    <div class="bg-glow bg-glow--yellow"></div>
+    <div class="bg-glow bg-glow--red"></div>
+  </div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="nav-wrap" id="navWrap">
+    <nav class="nav glass" aria-label="Primary">
+      <a href="#home" class="nav-logo" data-cursor="link">
+        <span class="nav-logo__mark">AS</span>
+        <span class="nav-logo__text">Ayush<span class="accent-green">.</span></span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link is-active" data-cursor="link">Home</a></li>
+        <li><a href="#about" class="nav-link" data-cursor="link">About</a></li>
+        <li><a href="#skills" class="nav-link" data-cursor="link">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-cursor="link">Projects</a></li>
+        <li><a href="#education" class="nav-link" data-cursor="link">Education</a></li>
+        <li><a href="#journey" class="nav-link" data-cursor="link">Journey</a></li>
+        <li><a href="#contact" class="nav-link nav-link--cta" data-cursor="link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="container hero__grid">
+
+        <div class="hero__content" data-reveal>
+          <p class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            Aspiring Software Engineer
+          </p>
+
+          <h1 class="hero__title" id="heroTitle">
+            <span class="hero__title-line" data-text="AYUSH">AYUSH</span>
+            <span class="hero__title-line hero__title-line--outline" data-text="SRIVASTAVA">SRIVASTAVA</span>
+          </h1>
+
+          <p class="hero__role">
+            B.Tech <span class="accent-green">CSE</span> Student
+          </p>
+
+          <p class="hero__desc">
+            Developer, builder and future entrepreneur passionate about creating
+            useful technology and solving real-world problems.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary magnetic" data-cursor="link">
+              <span>View My Work</span>
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+
+            <!-- TODO: drop your PDF at assets/ayush-srivastava-resume.pdf -->
+            <a href="assets/ayush-srivastava-resume.pdf" download class="btn btn--ghost magnetic" data-cursor="link" data-resume-link>
+              <span>Download Resume</span>
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>
+            </a>
+
+            <a href="#contact" class="btn btn--ghost magnetic" data-cursor="link">
+              <span>Let's Connect</span>
+            </a>
+          </div>
+
+          <div class="hero__socials" aria-label="Social links">
+            <a class="social-btn magnetic" href="https://github.com/ayushsrivastava86984-ux" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" data-cursor="link" data-tone="green">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+            </a>
+            <a class="social-btn magnetic placeholder-link" href="#contact" aria-label="LinkedIn profile (add your link)" data-cursor="link" data-tone="green"
+               data-note="Add your LinkedIn URL in index.html (search for “TODO: add your LinkedIn”).">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.71h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg>
+            </a>
+            <!-- TODO: add your email address below when available -->
+            <a class="social-btn magnetic placeholder-link" href="#contact" aria-label="Email address (add yours)" data-cursor="link" data-tone="yellow"
+               data-note="Add your email in index.html (search for “TODO: add your email”).">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3D photo composition -->
+        <div class="hero__visual" data-reveal>
+          <div class="orbit-ring orbit-ring--1" aria-hidden="true"></div>
+          <div class="orbit-ring orbit-ring--2" aria-hidden="true"></div>
+
+          <div class="photo-stage" id="photoStage">
+            <div class="photo-frame" id="photoFrame">
+              <div class="photo-frame__glow" aria-hidden="true"></div>
+              <div class="photo-frame__border">
+                <div class="photo-frame__inner">
+                  <!-- Your real photo: replace assets/ayush.jpg with your uploaded image -->
+                  <img id="heroPhoto" src="assets/ayush.jpg" alt="Portrait of Ayush Srivastava" loading="eager" decoding="async"
+                       onerror="if(this.src.indexOf('avatar-fallback')>-1){this.onerror=null;}else{var t=+(this.dataset.retry||0);this.dataset.retry=t+1;this.src=t===0?'assets/ayush.png':'assets/avatar-fallback.svg';}" />
+                </div>
+              </div>
+              <div class="photo-frame__shine" aria-hidden="true"></div>
+            </div>
+
+            <div class="float-chip float-chip--code" data-depth="26" aria-hidden="true">
+              <span class="float-chip__dots"><i></i><i></i><i></i></span>
+              <pre><code><span class="c-red">const</span> ayush = {
+  role: <span class="c-yellow">"engineer"</span>,
+  builds: <span class="c-green">true</span>
+};</code></pre>
+            </div>
+
+            <div class="float-chip float-chip--terminal" data-depth="-18" aria-hidden="true">
+              <span class="term-line"><span class="c-green">➜</span> git push origin main</span>
+              <span class="term-line term-line--dim">→ deployed successfully</span>
+            </div>
+
+            <div class="float-chip float-chip--badge" data-depth="34" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+              <span>GitHub</span>
+            </div>
+
+            <div class="float-chip float-chip--tag" data-depth="22" aria-hidden="true"><span class="accent-green">{ }</span> build · learn · repeat</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+        <span class="scroll-hint__mouse"><span></span></span>
+        <span class="scroll-hint__text">scroll</span>
+      </a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-kicker"><span class="kicker-line"></span>01 — About</p>
+          <h2 class="section-title" id="aboutTitle">About <span class="accent-green">Me</span></h2>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__text glass-card" data-reveal>
+            <p>
+              I'm <strong>Ayush Srivastava</strong>, a B.Tech Computer Science &amp; Engineering
+              student and aspiring software engineer. I enjoy understanding how things work,
+              then building things that actually help people.
+            </p>
+            <p>
+              My focus is software development, with a growing interest in
+              <span class="accent-green">AI and technology</span>. I learn by doing — building
+              projects, experimenting with new tools, and improving a little every day.
+            </p>
+            <p>
+              Long term, I want to build products of my own and grow toward
+              <span class="accent-yellow">startup and entrepreneurship</span>. I'm at the
+              beginning of that road, and I'm taking it one step at a time.
+            </p>
+
+            <ul class="about__facts">
+              <li><span class="fact-key">Status</span><span class="fact-val">B.Tech CSE · Student</span></li>
+              <li><span class="fact-key">Focus</span><span class="fact-val">Software Development</span></li>
+              <li><span class="fact-key">Interest</span><span class="fact-val">AI · Technology · Products</span></li>
+              <li><span class="fact-key">Goal</span><span class="fact-val">Build · Solve · Create</span></li>
+            </ul>
+          </div>
+
+          <div class="about__cards">
+            <article class="id-card tilt" data-reveal data-tone="green" style="--d:.05s">
+              <span class="id-card__icon">{"{}"}</span>
+              <h3>Developer</h3>
+              <p>Writing code to turn ideas into working software.</p>
+            </article>
+            <article class="id-card tilt" data-reveal data-tone="yellow" style="--d:.12s">
+              <span class="id-card__icon">?</span>
+              <h3>Problem Solver</h3>
+              <p>Breaking real problems down into simple, buildable solutions.</p>
+            </article>
+            <article class="id-card tilt" data-reveal data-tone="red" style="--d:.19s">
+              <span class="id-card__icon">▲</span>
+              <h3>Builder</h3>
+              <p>Learning faster by shipping projects, not just reading about them.</p>
+            </article>
+            <article class="id-card tilt" data-reveal data-tone="white" style="--d:.26s">
+              <span class="id-card__icon">→</span>
+              <h3>Future Entrepreneur</h3>
+              <p>Working toward building products and ventures of my own.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS / TECHNOLOGY GALAXY ================= -->
+    <section class="section" id="skills" aria-labelledby="skillsTitle">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-kicker"><span class="kicker-line"></span>02 — Skills</p>
+          <h2 class="section-title" id="skillsTitle">Technology <span class="accent-yellow">Galaxy</span></h2>
+          <p class="section-sub">
+            <!-- TODO: replace with the technologies you actually use -->
+            A floating map of the technologies I work with — hover a node to inspect it.
+          </p>
+        </header>
+
+        <div class="galaxy" id="galaxy" data-reveal>
+          <canvas class="galaxy-canvas" id="galaxyCanvas" aria-hidden="true"></canvas>
+
+          <div class="galaxy-nodes" id="galaxyNodes" role="list" aria-label="Technologies">
+            <p class="galaxy-cat" data-cat="Programming" data-tone="green" role="presentation">Programming</p>
+            <button class="gnode" role="listitem" data-cat="Programming" data-tone="green" data-info="Add a language you actually use and how you use it.">Skill 1</button>
+            <button class="gnode" role="listitem" data-cat="Programming" data-tone="green" data-info="Add a language you actually use and how you use it.">Skill 2</button>
+            <button class="gnode" role="listitem" data-cat="Programming" data-tone="green" data-info="Add a language you actually use and how you use it.">Skill 3</button>
+
+            <p class="galaxy-cat" data-cat="Web Development" data-tone="yellow" role="presentation">Web Development</p>
+            <button class="gnode" role="listitem" data-cat="Web Development" data-tone="yellow" data-info="Add a web technology you build with.">Skill 4</button>
+            <button class="gnode" role="listitem" data-cat="Web Development" data-tone="yellow" data-info="Add a web technology you build with.">Skill 5</button>
+            <button class="gnode" role="listitem" data-cat="Web Development" data-tone="yellow" data-info="Add a web technology you build with.">Skill 6</button>
+
+            <p class="galaxy-cat" data-cat="AI / Tools" data-tone="green" role="presentation">AI / Tools</p>
+            <button class="gnode" role="listitem" data-cat="AI / Tools" data-tone="green" data-info="Add an AI tool or library you work with.">Skill 7</button>
+            <button class="gnode" role="listitem" data-cat="AI / Tools" data-tone="green" data-info="Add an AI tool or library you work with.">Skill 8</button>
+
+            <p class="galaxy-cat" data-cat="Database" data-tone="red" role="presentation">Database</p>
+            <button class="gnode" role="listitem" data-cat="Database" data-tone="red" data-info="Add a database you have used in a project.">Skill 9</button>
+            <button class="gnode" role="listitem" data-cat="Database" data-tone="red" data-info="Add a database you have used in a project.">Skill 10</button>
+
+            <p class="galaxy-cat" data-cat="Developer Tools" data-tone="white" role="presentation">Developer Tools</p>
+            <button class="gnode" role="listitem" data-cat="Developer Tools" data-tone="white" data-info="Add a tool from your daily workflow.">Skill 11</button>
+            <button class="gnode" role="listitem" data-cat="Developer Tools" data-tone="white" data-info="Add a tool from your daily workflow.">Skill 12</button>
+            <button class="gnode" role="listitem" data-cat="Developer Tools" data-tone="white" data-info="Add a tool from your daily workflow.">Skill 13</button>
+          </div>
+
+          <aside class="galaxy-info glass" id="galaxyInfo" aria-live="polite">
+            <span class="galaxy-info__cat" id="galaxyInfoCat">Technology</span>
+            <h3 id="galaxyInfoTitle">Hover a node</h3>
+            <p id="galaxyInfoText">Move over any floating technology node to see its details here.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section" id="projects" aria-labelledby="projectsTitle">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-kicker"><span class="kicker-line"></span>03 — Projects</p>
+          <h2 class="section-title" id="projectsTitle">Project <span class="accent-red">Showcase</span></h2>
+          <p class="section-sub">
+            <!-- TODO: replace these placeholders with your real projects -->
+            Selected work — click a card for the full breakdown.
+          </p>
+        </header>
+
+        <div class="project-grid">
+
+          <article class="project-card tilt" data-reveal
+                   data-title="Project 01"
+                   data-img="assets/project-placeholder.svg"
+                   data-desc="Add a short description of this project: what it does, who it is for, and the problem it solves."
+                   data-tags="Tech 1|Tech 2|Tech 3"
+                   data-features="Feature one — describe it|Feature two — describe it|Feature three — describe it">
+            <div class="project-card__media">
+              <img src="assets/project-placeholder.svg" alt="Preview of Project 01" loading="lazy" decoding="async" />
+              <span class="project-card__badge">01</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Project 01</h3>
+              <p>Add a short description of this project: what it does and the problem it solves.</p>
+              <ul class="tag-row" aria-label="Technologies used">
+                <li class="tag">Tech 1</li><li class="tag">Tech 2</li><li class="tag">Tech 3</li>
+              </ul>
+              <div class="project-card__actions">
+                <a class="btn btn--mini btn--ghost" href="https://github.com/ayushsrivastava86984-ux" target="_blank" rel="noopener noreferrer" data-cursor="link" onclick="event.stopPropagation()">GitHub</a>
+                <button class="btn btn--mini btn--primary" type="button" data-open-modal data-cursor="link">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt" data-reveal
+                   data-title="Project 02"
+                   data-img="assets/project-placeholder.svg"
+                   data-desc="Add a short description of this project: what it does, who it is for, and the problem it solves."
+                   data-tags="Tech 1|Tech 2|Tech 3"
+                   data-features="Feature one — describe it|Feature two — describe it|Feature three — describe it">
+            <div class="project-card__media">
+              <img src="assets/project-placeholder.svg" alt="Preview of Project 02" loading="lazy" decoding="async" />
+              <span class="project-card__badge">02</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Project 02</h3>
+              <p>Add a short description of this project: what it does and the problem it solves.</p>
+              <ul class="tag-row" aria-label="Technologies used">
+                <li class="tag">Tech 1</li><li class="tag">Tech 2</li><li class="tag">Tech 3</li>
+              </ul>
+              <div class="project-card__actions">
+                <a class="btn btn--mini btn--ghost" href="https://github.com/ayushsrivastava86984-ux" target="_blank" rel="noopener noreferrer" data-cursor="link" onclick="event.stopPropagation()">GitHub</a>
+                <button class="btn btn--mini btn--primary" type="button" data-open-modal data-cursor="link">Details</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card tilt" data-reveal
+                   data-title="Project 03"
+                   data-img="assets/project-placeholder.svg"
+                   data-desc="Add a short description of this project: what it does, who it is for, and the problem it solves."
+                   data-tags="Tech 1|Tech 2|Tech 3"
+                   data-features="Feature one — describe it|Feature two — describe it|Feature three — describe it">
+            <div class="project-card__media">
+              <img src="assets/project-placeholder.svg" alt="Preview of Project 03" loading="lazy" decoding="async" />
+              <span class="project-card__badge">03</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Project 03</h3>
+              <p>Add a short description of this project: what it does and the problem it solves.</p>
+              <ul class="tag-row" aria-label="Technologies used">
+                <li class="tag">Tech 1</li><li class="tag">Tech 2</li><li class="tag">Tech 3</li>
+              </ul>
+              <div class="project-card__actions">
+                <a class="btn btn--mini btn--ghost" href="https://github.com/ayushsrivastava86984-ux" target="_blank" rel="noopener noreferrer" data-cursor="link" onclick="event.stopPropagation()">GitHub</a>
+                <button class="btn btn--mini btn--primary" type="button" data-open-modal data-cursor="link">Details</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- ============ FEATURED PROJECT ============ -->
+        <div class="featured glass-card" data-reveal aria-labelledby="featuredTitle">
+          <div class="featured__info">
+            <p class="section-kicker"><span class="kicker-line kicker-line--red"></span>Featured</p>
+            <h3 id="featuredTitle">Featured Project</h3>
+            <p class="featured__desc">
+              <!-- TODO: replace with your actual featured project -->
+              Add the description of the project you are most proud of — what it is,
+              why you built it, and the problem it solves.
+            </p>
+
+            <div class="featured__block">
+              <h4>Problem solved</h4>
+              <p>Describe the real-world problem this project addresses.</p>
+            </div>
+
+            <ul class="tag-row" aria-label="Technology stack">
+              <li class="tag">Stack 1</li><li class="tag">Stack 2</li><li class="tag">Stack 3</li><li class="tag">Stack 4</li>
+            </ul>
+
+            <div class="featured__actions">
+              <a class="btn btn--primary magnetic" href="https://github.com/ayushsrivastava86984-ux" target="_blank" rel="noopener noreferrer" data-cursor="link">
+                <span>View on GitHub</span>
+              </a>
+              <!-- Add a real live demo URL below when you have one -->
+              <a class="btn btn--ghost magnetic placeholder-link" href="#projects" data-cursor="link"
+                 data-note="Add your live demo URL in index.html (search for “Add a real live demo”).">
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="featured__stage" aria-hidden="true">
+            <div class="browser-mock">
+              <div class="browser-mock__bar"><i></i><i></i><i></i><span>featured-project</span></div>
+              <div class="browser-mock__code">
+                <p><span class="ln">1</span><span class="c-red">const</span> <span class="c-white">project</span> = <span class="c-yellow">await</span> <span class="c-green">build</span>({</p>
+                <p><span class="ln">2</span>&nbsp;&nbsp;idea: <span class="c-yellow">"solve real problems"</span>,</p>
+                <p><span class="ln">3</span>&nbsp;&nbsp;stack: [<span class="c-yellow">"modern web"</span>],</p>
+                <p><span class="ln">4</span>&nbsp;&nbsp;quality: <span class="c-green">"production ready"</span>,</p>
+                <p><span class="ln">5</span>&nbsp;&nbsp;owner: <span class="c-yellow">"Ayush Srivastava"</span></p>
+                <p><span class="ln">6</span>});</p>
+                <p><span class="ln">7</span><span class="c-green">➜</span> ready to ship<span class="caret"></span></p>
+              </div>
+            </div>
+            <div class="featured__glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section" id="education" aria-labelledby="eduTitle">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-kicker"><span class="kicker-line"></span>04 — Education</p>
+          <h2 class="section-title" id="eduTitle">Education <span class="accent-green">Timeline</span></h2>
+        </header>
+
+        <ol class="timeline" id="timeline">
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-node timeline-node--active" aria-hidden="true"></span>
+            <div class="timeline-card glass-card">
+              <span class="timeline-date accent-yellow">In progress</span>
+              <h3>B.Tech — Computer Science &amp; Engineering</h3>
+              <p class="timeline-place">[ Institute / University name ]</p>
+              <p>
+                <!-- TODO: add your college name, years and coursework -->
+                Current studies. Add your institute, duration and coursework here.
+              </p>
+            </div>
+          </li>
+
+          <li class="timeline-item" data-reveal>
+            <span class="timeline-node" aria-hidden="true"></span>
+            <div class="timeline-card glass-card">
+              <span class="timeline-date">Earlier</span>
+              <h3>[ Add your earlier qualification ]</h3>
+              <p class="timeline-place">[ School / Board name ]</p>
+              <p>Add your previous education details here (12th / 10th or equivalent).</p>
+            </div>
+          </li>
+
+          <li class="timeline-item timeline-item--pending" data-reveal>
+            <span class="timeline-node timeline-node--pending" aria-hidden="true"></span>
+            <div class="timeline-card glass-card glass-card--dashed">
+              <span class="timeline-date accent-green">Ahead</span>
+              <h3>Continuous Learning</h3>
+              <p>Courses, certifications and skills — add them here as you earn them.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= JOURNEY / ROADMAP ================= -->
+    <section class="section" id="journey" aria-labelledby="journeyTitle">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-kicker"><span class="kicker-line"></span>05 — Journey</p>
+          <h2 class="section-title" id="journeyTitle">Development <span class="accent-yellow">Roadmap</span></h2>
+          <p class="section-sub">Where I am, and where I'm heading. Click a milestone to expand it.</p>
+        </header>
+
+        <div class="roadmap" data-reveal>
+          <div class="roadmap__path" aria-hidden="true"><span class="roadmap__progress"></span></div>
+
+          <ol class="roadmap__list">
+            <li class="milestone is-current" data-tone="green">
+              <span class="milestone__dot" aria-hidden="true"></span>
+              <details>
+                <summary><span class="milestone__step">01</span> Learn <em class="milestone__state">Now</em></summary>
+                <p>Building strong fundamentals — programming, computer science concepts and problem solving. Currently in progress.</p>
+              </details>
+            </li>
+            <li class="milestone is-current" data-tone="green">
+              <span class="milestone__dot" aria-hidden="true"></span>
+              <details>
+                <summary><span class="milestone__step">02</span> Build <em class="milestone__state">Now</em></summary>
+                <p>Turning knowledge into real projects — shipping, breaking, fixing and learning from everything I make.</p>
+              </details>
+            </li>
+            <li class="milestone" data-tone="yellow">
+              <span class="milestone__dot" aria-hidden="true"></span>
+              <details>
+                <summary><span class="milestone__step">03</span> Experiment <em class="milestone__state">Next</em></summary>
+                <p>Exploring AI, new frameworks and unconventional ideas to find what is worth building at scale.</p>
+              </details>
+            </li>
+            <li class="milestone" data-tone="yellow">
+              <span class="milestone__dot" aria-hidden="true"></span>
+              <details>
+                <summary><span class="milestone__step">04</span> Improve <em class="milestone__state">Next</em></summary>
+                <p>Deepening craft — cleaner code, better design, performance, collaboration and communication.</p>
+              </details>
+            </li>
+            <li class="milestone" data-tone="red">
+              <span class="milestone__dot" aria-hidden="true"></span>
+              <details>
+                <summary><span class="milestone__step">05</span> Launch <em class="milestone__state">Goal</em></summary>
+                <p>Putting a real product in front of real users and learning what the market actually needs.</p>
+              </details>
+            </li>
+            <li class="milestone" data-tone="red">
+              <span class="milestone__dot" aria-hidden="true"></span>
+              <details>
+                <summary><span class="milestone__step">06</span> Entrepreneur <em class="milestone__state">Goal</em></summary>
+                <p>The long-term goal: build and lead a technology venture that solves genuine problems.</p>
+              </details>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section section--contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container">
+        <header class="section-head section-head--center" data-reveal>
+          <p class="section-kicker section-kicker--center"><span class="kicker-line"></span>06 — Contact</p>
+          <h2 class="section-title" id="contactTitle">Let's Build <span class="accent-green">Something Together</span></h2>
+          <p class="section-sub">
+            Open to internships, collaborations, interesting projects and conversations about technology.
+          </p>
+        </header>
+
+        <div class="contact-hub" id="contactHub" data-reveal>
+          <div class="hub-core" id="hubCore" aria-hidden="true">
+            <span class="hub-core__ring"></span>
+            <span class="hub-core__ring hub-core__ring--2"></span>
+            <span class="hub-core__orb"></span>
+            <svg class="hub-core__icon" viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12h4l2-5 4 10 2-5h4"/>
+            </svg>
+          </div>
+
+          <ul class="hub-cards">
+            <!-- TODO: add your email address when available -->
+            <li class="hub-card placeholder-link" style="--i:0" data-tone="green"
+                data-note="Add your email in index.html (search for “TODO: add your email”).">
+              <span class="hub-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <span class="hub-card__label">Email</span>
+              <span class="hub-card__value">Add your address</span>
+            </li>
+
+            <li class="hub-card" style="--i:1" data-tone="green">
+              <a href="https://github.com/ayushsrivastava86984-ux" target="_blank" rel="noopener noreferrer" data-cursor="link">
+                <span class="hub-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg>
+                </span>
+                <span class="hub-card__label">GitHub</span>
+                <span class="hub-card__value">@ayushsrivastava86984-ux</span>
+              </a>
+            </li>
+
+            <!-- TODO: add your LinkedIn URL when available -->
+            <li class="hub-card placeholder-link" style="--i:2" data-tone="yellow"
+                data-note="Add your LinkedIn URL in index.html (search for “TODO: add your LinkedIn”).">
+              <span class="hub-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.71h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z"/></svg>
+              </span>
+              <span class="hub-card__label">LinkedIn</span>
+              <span class="hub-card__value">Add your profile</span>
+            </li>
+
+            <li class="hub-card" style="--i:3" data-tone="yellow">
+              <a href="assets/ayush-srivastava-resume.pdf" download data-resume-link data-cursor="link">
+                <span class="hub-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+                </span>
+                <span class="hub-card__label">Resume</span>
+                <span class="hub-card__value">Download PDF</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="nav-logo__mark">AS</span>
+        <div>
+          <strong>Ayush Srivastava</strong>
+          <p>Aspiring Software Engineer</p>
+        </div>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer">
+        <a href="https://github.com/ayushsrivastava86984-ux" target="_blank" rel="noopener noreferrer" data-cursor="link">GitHub</a>
+        <a href="https://www.linkedin.com/in/ayush-srivastava-1a2590433" target="_blank" rel="noopener noreferrer" data-cursor="link">LinkedIn</a>
+        <a href="mailto:ayushsrivastava86984@gmail.com" data-cursor="link">Email</a>
+        <a href="assets/ayush-srivastava-resume.pdf" download data-resume-link data-cursor="link">Resume</a>
+      </nav>
+
+      <p class="footer__tag">Built with curiosity, code and continuous learning.</p>
+    </div>
+  </footer>
+
+  <!-- ================= PROJECT MODAL ================= -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__panel glass-card" role="document">
+      <button class="modal__close" type="button" data-close-modal aria-label="Close project details">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <div class="modal__media">
+        <img id="modalImg" src="assets/project-placeholder.svg" alt="" loading="lazy" />
+      </div>
+
+      <div class="modal__body">
+        <h3 id="modalTitle">Project</h3>
+        <p id="modalDesc"></p>
+
+        <h4 class="modal__label">Technologies</h4>
+        <ul class="tag-row" id="modalTags"></ul>
+
+        <h4 class="modal__label">Key features</h4>
+        <ul class="modal__features" id="modalFeatures"></ul>
+
+        <div class="modal__actions">
+          <a class="btn btn--primary" id="modalGithub" href="https://github.com/ayushsrivastava86984-ux" target="_blank" rel="noopener noreferrer" data-cursor="link">GitHub</a>
+          <button class="btn btn--ghost" type="button" data-close-modal data-cursor="link">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast for placeholder links -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js" defer></script>
+  <script type="module" src="js/scene.js"></script>
+</body>
+</html>

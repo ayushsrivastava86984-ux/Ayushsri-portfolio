@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Project preview placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#101010"/>
+      <stop offset="60%" stop-color="#0b0b0b"/>
+      <stop offset="100%" stop-color="#0a1410"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="60%" stop-color="#facc15"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045"/>
+    </pattern>
+    <radialGradient id="glow" cx="26%" cy="24%" r="70%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <rect width="800" height="500" fill="url(#glow)"/>
+
+  <rect x="70" y="80" width="660" height="340" rx="18" fill="#0d0d0d" stroke="#ffffff" stroke-opacity="0.12"/>
+  <rect x="70" y="80" width="660" height="52" rx="18" fill="#ffffff" fill-opacity="0.05"/>
+  <circle cx="104" cy="106" r="7" fill="#ef4444"/>
+  <circle cx="130" cy="106" r="7" fill="#facc15"/>
+  <circle cx="156" cy="106" r="7" fill="#22c55e"/>
+  <rect x="196" y="98" width="300" height="17" rx="8" fill="#ffffff" fill-opacity="0.08"/>
+
+  <g font-family="SF Mono, Menlo, Consolas, monospace" font-size="18">
+    <text x="104" y="184" fill="#4b5563">01</text>
+    <text x="146" y="184" fill="#ff4d4d">const</text>
+    <text x="212" y="184" fill="#e5e7eb">project = {</text>
+
+    <text x="104" y="222" fill="#4b5563">02</text>
+    <text x="146" y="222" fill="#e5e7eb">  name:</text>
+    <text x="248" y="222" fill="#facc15">"your project",</text>
+
+    <text x="104" y="260" fill="#4b5563">03</text>
+    <text x="146" y="260" fill="#e5e7eb">  stack:</text>
+    <text x="248" y="260" fill="#facc15">["modern web"],</text>
+
+    <text x="104" y="298" fill="#4b5563">04</text>
+    <text x="146" y="298" fill="#e5e7eb">  status:</text>
+    <text x="262" y="298" fill="#39ff88">"building"</text>
+
+    <text x="104" y="336" fill="#4b5563">05</text>
+    <text x="146" y="336" fill="#e5e7eb">};</text>
+
+    <text x="104" y="382" fill="#4b5563">06</text>
+    <text x="146" y="382" fill="#39ff88">➜ replace with a real screenshot</text>
+  </g>
+
+  <rect x="330" y="446" width="140" height="6" rx="3" fill="url(#bar)" opacity="0.85"/>
+</svg>
